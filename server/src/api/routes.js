@@ -25,11 +25,7 @@ router.post('/', async (req, res, next) => {
   }
   catch(error)
   {
-    console.log(error.name);
-    if(error.name === 'ValidationError')
-    {
-      res.status(422);
-    }
+    //console.log(error.name);
     next(error);
   }
 });
